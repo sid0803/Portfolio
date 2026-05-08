@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="100" viewBox="0 0 800 100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&amp;display=swap');
+      .txt { font-family: 'Fira Code', monospace; font-size: 16px; font-weight: 600; fill: #8b949e; text-anchor: middle; }
+      .heart { fill: #ff5f56; animation: beat .5s infinite alternate; transform-origin: center; }
+      @keyframes beat{ to { transform: scale(1.2); } }
+    </style>
+  </defs>
+  <text x="400" y="50" class="txt">Built with <tspan class="heart">❤️</tspan> by Sandipan Chakraborty</text>
+</svg>

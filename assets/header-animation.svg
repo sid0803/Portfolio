@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="200" viewBox="0 0 850 200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&amp;family=Inter:wght@900&amp;display=swap');
+      .title { font-family: 'Inter', sans-serif; font-size: 55px; font-weight: 900; fill: #ffffff; text-anchor: middle; }
+      .subtitle { font-family: 'Fira Code', monospace; font-size: 22px; font-weight: 700; fill: #c481ff; text-anchor: middle; letter-spacing: 2px; }
+      .glow { filter: drop-shadow(0 0 10px rgba(196, 129, 255, 0.8)); }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      .animated { animation: float 4s ease-in-out infinite; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="transparent"/>
+  <g class="animated">
+    <text x="425" y="90" class="title glow">SANDIPAN CHAKRABORTY</text>
+    <text x="425" y="140" class="subtitle">AI BACKEND &amp; SYSTEMS ENGINEER</text>
+  </g>
+</svg>

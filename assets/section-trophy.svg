@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="40" viewBox="0 0 300 40">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;display=swap');
+      .txt { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 800; fill: #ffffff; letter-spacing: 1px; }
+      .icon { font-size: 22px; }
+    </style>
+  </defs>
+  <text x="0" y="28" class="icon">🏆</text>
+  <text x="35" y="26" class="txt">ACHIEVEMENTS</text>
+</svg>

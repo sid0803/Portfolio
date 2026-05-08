@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="250" viewBox="0 0 700 250">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
+      .term-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1; rx: 10; ry: 10; }
+      .term-header { fill: #161b22; }
+      .btn-r { fill: #ff5f56; } .btn-y { fill: #ffbd2e; } .btn-g { fill: #27c93f; }
+      .txt { font-family: 'Fira Code', monospace; font-size: 15px; fill: #c9d1d9; }
+      .prompt { fill: #79c0ff; font-weight: 600; }
+      .highlight { fill: #c481ff; font-weight: 600; }
+      .comment { fill: #8b949e; font-style: italic; }
+      
+      @keyframes type1 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes type2 { 0% { opacity: 0; } 40% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes type3 { 0% { opacity: 0; } 70% { opacity: 1; } 100% { opacity: 1; } }
+      .line1 { animation: type1 5s infinite; }
+      .line2 { animation: type2 5s infinite; }
+      .line3 { animation: type3 5s infinite; }
+    </style>
+  </defs>
+  <rect x="10" y="10" width="680" height="230" class="term-bg"/>
+  <path d="M10 20 C10 14.477 14.477 10 20 10 L680 10 C685.523 10 690 14.477 690 20 L690 40 L10 40 Z" class="term-header"/>
+  <circle cx="30" cy="25" r="6" class="btn-r"/>
+  <circle cx="50" cy="25" r="6" class="btn-y"/>
+  <circle cx="70" cy="25" r="6" class="btn-g"/>
+  <text x="350" y="29" font-family="'Fira Code', monospace" font-size="12" fill="#8b949e" text-anchor="middle">sid0803@macbook ~ zsh</text>
+  
+  <g transform="translate(30, 80)">
+    <g class="line1">
+      <text y="0" class="txt"><tspan class="prompt">&#10140;</tspan> <tspan class="highlight">~</tspan> ./whoami.sh</text>
+      <text y="30" class="txt">Loading AI Backend Engineer profile...</text>
+    </g>
+    <g class="line2">
+      <text y="70" class="txt"><tspan class="prompt">&#10140;</tspan> <tspan class="highlight">~</tspan> cat status.txt</text>
+      <text y="100" class="txt">Architecting low-latency AI pipelines (<tspan class="highlight">&lt; 200ms p95</tspan>)</text>
+      <text y="125" class="txt">and distributed systems that scale.</text>
+    </g>
+    <g class="line3">
+      <text y="165" class="txt"><tspan class="prompt">&#10140;</tspan> <tspan class="highlight">~</tspan> <tspan class="comment">&#9608;</tspan></text>
+    </g>
+  </g>
+</svg>
