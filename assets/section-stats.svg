@@ -1,11 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="40" viewBox="0 0 300 40">
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="50" viewBox="0 0 350 50">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;display=swap');
-      .txt { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 800; fill: #ffffff; letter-spacing: 1px; }
-      .icon { font-size: 22px; }
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&amp;display=swap');
+      .txt { font-family: 'Fira Code', monospace; font-size: 22px; font-weight: 700; fill: #ffffff; letter-spacing: 1px; }
+      .bracket { fill: #c481ff; }
+      .icon { font-size: 24px; }
+      .glow { filter: drop-shadow(0 0 8px rgba(196, 129, 255, 0.6)); }
     </style>
   </defs>
-  <text x="0" y="28" class="icon">📊</text>
-  <text x="35" y="26" class="txt">GITHUB ANALYTICS</text>
+  <text x="5" y="35" class="txt glow">
+    <tspan class="bracket">[</tspan> 📊 GITHUB_ANALYTICS <tspan class="bracket">]</tspan>
+  </text>
 </svg>

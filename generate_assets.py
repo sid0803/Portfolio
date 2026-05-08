@@ -155,7 +155,7 @@ def create_section(filename, icon, text):
     <tspan class="bracket">[</tspan> {icon} {text} <tspan class="bracket">]</tspan>
   </text>
 </svg>"""
-    with open(f'assets/{{filename}}.svg', 'w', encoding='utf-8') as f: f.write(svg)
+    with open(f'assets/{filename}.svg', 'w', encoding='utf-8') as f: f.write(svg)
 
 create_section('section-about', '👤', 'ABOUT_ME')
 create_section('section-trophy', '🏆', 'ACHIEVEMENTS')
