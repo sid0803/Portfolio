@@ -1,42 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="250" viewBox="0 0 700 250">
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="280" viewBox="0 0 750 280">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
-      .term-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1; rx: 10; ry: 10; }
-      .term-header { fill: #161b22; }
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&amp;display=swap');
+      .term-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1.5; rx: 12; ry: 12; }
+      .term-header { fill: #161b22; rx: 12; ry: 12; }
       .btn-r { fill: #ff5f56; } .btn-y { fill: #ffbd2e; } .btn-g { fill: #27c93f; }
-      .txt { font-family: 'Fira Code', monospace; font-size: 15px; fill: #c9d1d9; }
-      .prompt { fill: #79c0ff; font-weight: 600; }
-      .highlight { fill: #c481ff; font-weight: 600; }
+      .txt { font-family: 'Fira Code', monospace; font-size: 15px; fill: #c9d1d9; font-weight: 500; }
+      .prompt { fill: #27c93f; font-weight: 700; }
+      .server { fill: #79c0ff; font-weight: 700; }
+      .cmd { fill: #c481ff; font-weight: 700; }
+      .arg { fill: #ff9e64; }
       .comment { fill: #8b949e; font-style: italic; }
+      .cursor { fill: #c481ff; animation: blink 1s step-end infinite; }
       
-      @keyframes type1 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
-      @keyframes type2 { 0% { opacity: 0; } 40% { opacity: 1; } 100% { opacity: 1; } }
-      @keyframes type3 { 0% { opacity: 0; } 70% { opacity: 1; } 100% { opacity: 1; } }
-      .line1 { animation: type1 5s infinite; }
-      .line2 { animation: type2 5s infinite; }
-      .line3 { animation: type3 5s infinite; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      @keyframes type1 { 0% { opacity: 0; } 5% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes type2 { 0% { opacity: 0; } 30% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes type3 { 0% { opacity: 0; } 65% { opacity: 1; } 100% { opacity: 1; } }
+      
+      .line1 { animation: type1 8s infinite; }
+      .line2 { animation: type2 8s infinite; }
+      .line3 { animation: type3 8s infinite; }
     </style>
   </defs>
-  <rect x="10" y="10" width="680" height="230" class="term-bg"/>
-  <path d="M10 20 C10 14.477 14.477 10 20 10 L680 10 C685.523 10 690 14.477 690 20 L690 40 L10 40 Z" class="term-header"/>
-  <circle cx="30" cy="25" r="6" class="btn-r"/>
-  <circle cx="50" cy="25" r="6" class="btn-y"/>
-  <circle cx="70" cy="25" r="6" class="btn-g"/>
-  <text x="350" y="29" font-family="'Fira Code', monospace" font-size="12" fill="#8b949e" text-anchor="middle">sid0803@macbook ~ zsh</text>
   
-  <g transform="translate(30, 80)">
+  <rect x="5" y="5" width="740" height="270" class="term-bg"/>
+  <path d="M5 17 C5 10.373 10.373 5 17 5 L733 5 C739.627 5 745 10.373 745 17 L745 40 L5 40 Z" class="term-header"/>
+  
+  <circle cx="25" cy="22" r="6" class="btn-r"/>
+  <circle cx="45" cy="22" r="6" class="btn-y"/>
+  <circle cx="65" cy="22" r="6" class="btn-g"/>
+  <text x="375" y="27" font-family="'Fira Code', monospace" font-size="13" fill="#8b949e" text-anchor="middle">sid0803@ai-core ~ zsh</text>
+  
+  <g transform="translate(25, 80)">
     <g class="line1">
-      <text y="0" class="txt"><tspan class="prompt">&#10140;</tspan> <tspan class="highlight">~</tspan> ./whoami.sh</text>
-      <text y="30" class="txt">Loading AI Backend Engineer profile...</text>
+      <text y="0" class="txt"><tspan class="prompt">sid0803</tspan>@<tspan class="server">ai-core</tspan> ~ <tspan class="cmd">python3</tspan> <tspan class="arg">init_pipeline.py</tspan></text>
+      <text y="30" class="txt comment">[INFO] Booting neural interface...</text>
+      <text y="55" class="txt comment">[INFO] Establishing sub-200ms latency connections...</text>
+      <text y="80" class="txt" fill="#27c93f">[SUCCESS] AI Backend Node Active.</text>
     </g>
+    
     <g class="line2">
-      <text y="70" class="txt"><tspan class="prompt">&#10140;</tspan> <tspan class="highlight">~</tspan> cat status.txt</text>
-      <text y="100" class="txt">Architecting low-latency AI pipelines (<tspan class="highlight">&lt; 200ms p95</tspan>)</text>
-      <text y="125" class="txt">and distributed systems that scale.</text>
+      <text y="130" class="txt"><tspan class="prompt">sid0803</tspan>@<tspan class="server">ai-core</tspan> ~ <tspan class="cmd">cat</tspan> <tspan class="arg">status.log</tspan></text>
+      <text y="160" class="txt">Currently architecting <tspan fill="#c481ff" font-weight="700">production voice AI systems</tspan></text>
+      <text y="185" class="txt">and scaling <tspan fill="#79c0ff" font-weight="700">distributed microservices</tspan>.</text>
     </g>
+    
     <g class="line3">
-      <text y="165" class="txt"><tspan class="prompt">&#10140;</tspan> <tspan class="highlight">~</tspan> <tspan class="comment">&#9608;</tspan></text>
+      <text y="235" class="txt"><tspan class="prompt">sid0803</tspan>@<tspan class="server">ai-core</tspan> ~ <tspan class="cursor">█</tspan></text>
     </g>
   </g>
 </svg>

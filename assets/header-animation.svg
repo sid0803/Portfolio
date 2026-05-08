@@ -1,21 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="200" viewBox="0 0 850 200">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="220" viewBox="0 0 850 220">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&amp;family=Inter:wght@900&amp;display=swap');
-      .title { font-family: 'Inter', sans-serif; font-size: 55px; font-weight: 900; fill: #ffffff; text-anchor: middle; }
-      .subtitle { font-family: 'Fira Code', monospace; font-size: 22px; font-weight: 700; fill: #c481ff; text-anchor: middle; letter-spacing: 2px; }
-      .glow { filter: drop-shadow(0 0 10px rgba(196, 129, 255, 0.8)); }
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&amp;family=Outfit:wght@800;900&amp;display=swap');
+      .title { font-family: 'Outfit', sans-serif; font-size: 58px; font-weight: 900; fill: #ffffff; text-anchor: middle; }
+      .subtitle { font-family: 'Fira Code', monospace; font-size: 20px; font-weight: 700; fill: #c481ff; text-anchor: middle; letter-spacing: 3px; }
+      .glow { filter: drop-shadow(0 0 15px rgba(196, 129, 255, 0.9)); }
+      .blue-glow { filter: drop-shadow(0 0 10px rgba(121, 192, 255, 0.7)); }
       
       @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
       }
-      .animated { animation: float 4s ease-in-out infinite; }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.8; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      .animated-text { animation: float 5s ease-in-out infinite; }
+      .pulse-obj { animation: pulse 4s ease-in-out infinite; transform-origin: center; }
     </style>
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c481ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#c481ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#79c0ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#79c0ff" stop-opacity="0"/>
+    </radialGradient>
   </defs>
+  
   <rect width="100%" height="100%" fill="transparent"/>
-  <g class="animated">
-    <text x="425" y="90" class="title glow">SANDIPAN CHAKRABORTY</text>
-    <text x="425" y="140" class="subtitle">AI BACKEND &amp; SYSTEMS ENGINEER</text>
+  
+  <!-- Animated Background Orbs -->
+  <circle cx="200" cy="110" r="180" fill="url(#orb1)" class="pulse-obj">
+    <animate attributeName="cx" values="100;750;100" dur="20s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="650" cy="110" r="150" fill="url(#orb2)" class="pulse-obj">
+    <animate attributeName="cx" values="750;100;750" dur="25s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="50;180;50" dur="15s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Foreground Text -->
+  <g class="animated-text">
+    <text x="425" y="110" class="title glow">SANDIPAN CHAKRABORTY</text>
+    <text x="425" y="155" class="subtitle blue-glow">AI BACKEND &amp; SYSTEMS ENGINEER</text>
   </g>
 </svg>
