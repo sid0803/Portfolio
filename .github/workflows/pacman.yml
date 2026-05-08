@@ -12,14 +12,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: Platane/snk@v3
         with:
           github_user_name: sid0803
           outputs: |
             assets/pacman-dark.svg?color_snake=764ba2&color_dot_0=0d1117&color_dot_1=1a1b3e&color_dot_2=2d2b55&color_dot_3=4a3f8a&color_dot_4=764ba2
-      - uses: crazy-max/ghaction-github-pages@v3
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          target_branch: main
-          build_dir: assets
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "chore: update pacman svg"
